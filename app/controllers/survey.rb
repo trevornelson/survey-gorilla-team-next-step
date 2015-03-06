@@ -1,4 +1,4 @@
-get '/survey/:id' do
+get '/survey' do
   erb :'surveys/show'
 end
 
