@@ -3,3 +3,38 @@
   background-color: #D9CB9E;
 }
 /*End Survey CSS*/
+
+.container-fluid {
+   display: block;
+   background-color: #374140;
+}
+ul #login {
+   background-color: #D9CB9E;
+   list-style-type: none;
+}
+
+li {
+  display: inline;
+}
+#title {
+  display: block;
+  height: 150px;
+  margin-top: 20px;
+  background-color: #D9CB9E;
+}
+#greeting {
+  display: block;
+  height: 300px;
+}
+#buttons {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: 150px;
+  width: 150px;
+  margin-bottom: 100px;
+}
+.btn {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
