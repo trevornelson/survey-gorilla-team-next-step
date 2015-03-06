@@ -8,4 +8,7 @@
 Potentially:
 - As a user, I want to be able to choose a chart type for my surveys
 
+- Team Name :NeXTSRTEP
+- Team memebers: Trevor Nelson, Natali Bryzhatenko, Chris Selden
 
+![schema](/schema.png)
