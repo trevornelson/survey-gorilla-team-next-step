@@ -76,7 +76,7 @@ namespace :db do
   task :seed do
     require APP_ROOT.join('db', 'seeds.rb')
   end
-  
+
   namespace :test do
     desc "Migrate test database"
     task :prepare do
