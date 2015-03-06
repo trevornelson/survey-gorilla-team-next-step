@@ -19,6 +19,8 @@ Survey.all.each do |s|
                               email: Faker::Internet.email,
                               password: Faker::Internet.password)
 
+    SurveyUser.create(user_id: survey_user.id, survey_id: s.id)
+
     s.questions.each do |q|
       answer = Random.rand(1..3)
       Answer.create(question_id: q.id, choice_id: answer)
