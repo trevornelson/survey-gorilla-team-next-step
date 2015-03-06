@@ -13,4 +13,6 @@ def app
     Sinatra::Application
 end
 
-
+def session
+  @session ||= {}
+end
