@@ -23,6 +23,7 @@ li {
   background-color: #D9CB9E;
 }
 #greeting {
+  position:; absolute;
   display: block;
   height: 400px;
 }
@@ -37,14 +38,24 @@ li {
 .btn {
   margin-top: 20px;
   margin-bottom: 10px;
+  background: #dc3522;
+  border: #374140;
 }
+.btn:hover {
+  background: #d9cb9e;
+}
+.btn:active {
+  background: #d9cb9e;
+}
+
 #logform, #signform {
+  position: fixed;
   bottom: 50px;
   margin-top: 250px;
   margin-left: 100px;
   padding: 50px;
   width: 30%;
-  background: #dc3522;
+  background: #D9CB9E;
   display: none;
   border-radius: 10px;
 }
