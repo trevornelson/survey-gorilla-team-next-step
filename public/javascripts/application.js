@@ -3,11 +3,12 @@
 $(document).ready(function() {
   $("#login").click(function() {
     $("#signform").hide();
-    $("#logform").show();
+    $("#logform").fadeIn("slow");
   });
 
   $("#signup").click(function() {
     $("#logform").hide();
-    $("#signform").show();
+    $("#signform").fadeIn("slow");
   });
+
 });
