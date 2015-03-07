@@ -1,4 +1,7 @@
 get '/survey' do
+	@surveys = Survey.all
+	@questions = Question.all
+	@answers = Answer.all
   erb :'surveys/show'
 end
 
