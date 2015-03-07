@@ -13,6 +13,7 @@ require 'pathname'
 enable :sessions
 
 require 'erb'
+require 'faker'
 
 
 # Some helper constants for path-centric logic
