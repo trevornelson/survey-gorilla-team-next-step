@@ -8,7 +8,7 @@ end
 
 post "/authentication/register_user" do
   if params[:password] == params[:password_confirm]
-    user = User.new(params)
+    user = User.new(name: params[:name], email: params[:email], password: params[:password])
     user.save
     session[:user_id] = user.id
     redirect '/'
@@ -18,7 +18,7 @@ post "/authentication/register_user" do
 
 end
 
-post "authentication/signin" do
+post "/authentication/signin" do
   user = User.find_by(email: params[:email])
   if user && user.authenticate(params[:password])
     session[:user_id] = user.id
