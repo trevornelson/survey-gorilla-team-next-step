@@ -26,6 +26,8 @@ li {
   position:; absolute;
   display: block;
   height: 400px;
+  display: block;
+  height: 300px;
 }
 #buttons {
   margin-left: auto;

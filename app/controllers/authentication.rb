@@ -27,3 +27,9 @@ post "/authentication/signin" do
     redirect '/?error=true'
   end
 end
+  erb :'authentication/login'
+end
+
+get "/authentication/signup" do
+  erb :"authentication/signup"
+end
