@@ -13,3 +13,9 @@ end
 get '/partial' do
   erb :'surveys/survey_partial'
 end
+
+get '/surveys/results.json' do
+	content_type :json
+	survey = Survey.find(params[:survey_id])
+	survey.results.to_json
+end

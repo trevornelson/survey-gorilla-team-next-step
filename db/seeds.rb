@@ -1,7 +1,7 @@
 3.times do
   user = User.create(name: Faker::Name.name,
                   email: Faker::Internet.email,
-                  password: Faker::Internet.password)
+                  password: "12345")
   5.times do
     survey = user.surveys.create(title: Faker::Lorem.word)
     6.times do
