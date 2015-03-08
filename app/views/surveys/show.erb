@@ -1,11 +1,21 @@
-<div class="container">
-  <div class="page-header"><h2>Survey Title</h2></div>
-  <div class="panel panel-default">
-    <div class="panel-body">
-      <p><b>Question</b>: Did you meet Tom Hanks last night?</p>
-    </div>
-    <div class="panel-footer">
-      <ul><label><input type="radio" name="optradio">  Yes</label></ul>
-    </div>
-  </div>
-</div>
+	<div class="container">
+		<div class="page-header"><h2><%= @survey.title.capitalize %></h2></div>
+		<% @questions.each do |q|%>
+		<% if @survey.id == q.survey_id %>
+		<div class="panel panel-default">
+			<div class="panel-body ">
+				<p><b>Question</b>: <%=q.text%></p>
+			</div>
+		<% @choices.each do |c|%>
+		<% if c.question_id == q.id && @survey.id == q.survey_id %>
+			<div class="panel-footer">
+				<ul><label><input type="radio" name="optradio_{<%=q.id%>}"> <%= c.text %> </label></ul>
+			</div>
+		<%end%>
+		<%end%>
+		</div>
+		<%end%>
+		<%end%>
+		<div class="btn" style="float: right">Submit</div>
+	</div>
+
