@@ -6,7 +6,11 @@
 		</div>
 		<div class='panel-body'>
 			<div class='ct-chart' id="question_<%= question.id %>"></div>
-			<table>
+			<table class='table'>
+			<tr>
+				<th>Choice</th>
+				<th>Responses</th>
+			</tr>
 			<% question.choices.each do |choice| %>
 				<tr>
 					<td><%= choice.text %></td>
