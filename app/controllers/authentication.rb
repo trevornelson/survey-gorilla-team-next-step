@@ -11,7 +11,7 @@ post "/authentication/register_user" do
     user = User.new(name: params[:name], email: params[:email], password: params[:password])
     user.save
     session[:user_id] = user.id
-    redirect '/users/#{user.id}'
+    redirect "/users/#{user.id}"
   else
     redirect '/?error=true'
   end
@@ -28,10 +28,7 @@ post "/authentication/signin" do
   end
 end
 
-# get "/authentication/login"
-#   erb :'authentication/login'
-# end
-
-# get "/authentication/signup" do
-#   erb :"authentication/signup"
-# end
+get '/authentication/logout' do
+  session[:user_id] = nil
+  redirect '/'
+end
