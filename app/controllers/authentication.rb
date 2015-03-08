@@ -1,10 +1,4 @@
-# get "/authentication/login" do
-#   erb :'auth/login'
-# end
 
-# get "/authentication/signup" do
-#   erb :"auth/signup"
-# end
 
 post "/authentication/register_user" do
   if params[:password] == params[:password_confirm]
@@ -27,3 +21,10 @@ post "/authentication/signin" do
     redirect '/?error=true'
   end
 end
+
+
+get "/authentication/logout" do
+  session[:user_id] = nil
+  redirect '/'
+end
+
