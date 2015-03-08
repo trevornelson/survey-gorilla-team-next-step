@@ -1,5 +1,7 @@
-<div class="container-fluid">
-  <div id="title"></div>
+<div class="container-fluid" id="index">
+  <div id="title">
+    <h1 id="welcome">Welcome to Survey Gorilla!!!</h1>
+    </div>
 
   <div id="greeting">
     <div id="logform">
@@ -9,6 +11,7 @@
         <input type='submit' value='signin'/><br>
       </form>
     </div>
+
     <div id="signform">
       <form action='/authentication/register_user' method='POST'>
         <input type='text' name='name' placeholder='NAME'/><br><br>
@@ -18,16 +21,9 @@
         <input type='submit' value='SIGN UP'/>
       </form>
     </div>
+     <div id="buttons" >
+        <button type="button" class="btn btn-default btn-lg btn-block" id="login">LOG IN</button>
+       <button type="button" class="btn btn-default btn-lg btn-block" id="signup">SIGN UP</button>
+    </div>
   </div>
-  <div id="buttons">
-    <button type="button" class="btn btn-default btn-lg btn-block" id="login">LOG IN</button>
-   <button type="button" class="btn btn-default btn-lg btn-block" id="signup">SIGN UP</button>
- </div>
-   <!-- <button type="button" class="btn btn-default btn-lg btn-block" id="login"><a href="authentication/login">LOG IN</a></button>
-   <button type="button" class="btn btn-default btn-lg btn-block" id="signup"><a href="authentication/signup">SIGN UP</a></button>
- </div> -->
-  <div id="buttons"></div>
-   <button type="button" class="btn btn-default btn-lg btn-block"><a href="authentication/login">LOG IN</a></button>
-   <button type="button" class="btn btn-default btn-lg btn-block"><a href="authentication/signup">SIGN UP</a></button>
- </div>
 </div>
