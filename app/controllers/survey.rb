@@ -17,5 +17,6 @@ end
 get '/surveys/results.json' do
 	content_type :json
 	survey = Survey.find(params[:survey_id])
+	p params[:survey_id]
 	survey.results.to_json
 end

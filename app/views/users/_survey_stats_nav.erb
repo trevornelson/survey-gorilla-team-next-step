@@ -1,11 +1,9 @@
-<div class="col-md-3">
-	<ul class="list-group">
-	<% surveys.each do |survey| %>
-		<li class="list-group-item">
-			<a href="" class="survey-selector" id="survey-<%= survey.id %>">
-				<%= survey.title %>
-			</a>
-		</li>
-	<% end %>
-	</ul>
-</div>
+<ul class="list-group">
+<% surveys.each do |survey| %>
+	<li class="list-group-item">
+		<a href="" class="survey-selector" data-survey-id="<%= survey.id %>">
+			<%= survey.title %>
+		</a>
+	</li>
+<% end %>
+</ul>

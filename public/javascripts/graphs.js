@@ -4,6 +4,15 @@ $( document ).ready(function(){
 
   Funct.surveyStatsAjax(surveyId);
 
+  $( '.survey-selector' ).on( 'click', function(e){
+    e.preventDefault();
+
+    var $target = e.target;
+    var $data = $(this).data();
+
+    Funct.updateSurveyStats($target, $data);
+  });
+
 });
 
 
@@ -12,10 +21,20 @@ var Funct = {
 	getTarget: function(e){
 		e.preventDefault();
 
-  	$target = e.target;
+  	var $target = e.target;
+    return $target;
 	},
+  getData: function(target){
+    var $data = target.data();
+    return $data;
+  },
 	surveyNavActive: function(){
-  	$target.addClass('active');
+    $( '.survey-selector' ).removeClass( 'active' );
+    $(this).addClass('active');
+  },
+  updateSurveyStats: function(target, data){
+    Funct.surveyNavActive(target);
+    Funct.surveyStatsAjax(data['surveyId']);
   },
   surveyStatsAjax: function(survey_id){
   	$.ajax({
@@ -23,6 +42,7 @@ var Funct = {
   		type: 'get',
       data: {survey_id: survey_id},
       success: function(result) {
+        console.log(result);
         for (var question in result) {
           if (result.hasOwnProperty(question)) {
             Graph.generateGraph(result[question], question);
@@ -36,11 +56,9 @@ var Funct = {
 var Graph = {
   generateGraph: function(question_stats, question_id) {
     var settings = Graph.labelPie(question_stats);
-    // new Chartist.Pie('.ct_chart', settings.data, settings.options, settings.responsiveOptions);
-    new Chartist.Pie('#question_' + question_id, settings.data, settings.options, settings.responsiveOptions);
+    new Chartist.Pie('#question_' + question_id, settings.data, settings.options);
   },
   labelPie: function(question_stats) {
-    console.log('in labelPie function');
     var data = {
       labels: [],
       series: []
@@ -54,32 +72,16 @@ var Graph = {
     }
 
     var options = {
+      width: 300,
+      height: 300,
+      labelOffset: 0,
       labelInterpolationFnc: function(value) {
         return value[0];
       }
     }
-
-    var responsiveOptions = [
-      ['screen and (min-width: 640px)', {
-        chartPadding: 30,
-        labelOffset: 120,
-        labelDirection: 'explode',
-        labelInterpolationFnc: function(value) {
-          return value;
-        }
-      }],
-      ['screen and (min-width: 1024px)', {
-        labelOffset: 80,
-        chartPadding: 20
-      }]
-    ];
-    console.log(data);
-    console.log(options);
-    console.log(responsiveOptions);
     return {
       data: data,
-      options: options,
-      responsiveOptions: responsiveOptions
+      options: options
     };
   }
 };

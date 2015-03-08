@@ -1,5 +1,20 @@
-<div class='container-fluid' data-survey=<%= survey.id %> id='survey-container'>
-	<% survey.questions.each_with_index do |question, index| %>
-	<div class='ct-chart ct-square' id="question_<%= question.id %>"></div>
+<div class='row' data-survey=<%= survey.id %> id='survey-container'>
+	<% survey.questions.each do |question| %>
+	<div class='question-results col-md-5 panel panel-default'>
+		<div class='panel-header'>
+			<h4><%= question.text %></h4>
+		</div>
+		<div class='panel-body'>
+			<div class='ct-chart' id="question_<%= question.id %>"></div>
+			<table>
+			<% question.choices.each do |choice| %>
+				<tr>
+					<td><%= choice.text %></td>
+					<td><%= choice.answers.length %></td>
+				</tr>
+			<% end %>
+			</table>
+		</div>
+	</div>
 	<% end %>
 </div>
