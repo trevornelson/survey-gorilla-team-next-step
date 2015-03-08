@@ -18,6 +18,7 @@
 .container-fluid {
    display: block;
    background-color: #d9cb9e;
+   height: 750px;
 }
 ul #login {
    background-color: #D9CB9E;
@@ -45,7 +46,7 @@ li {
   /*-o-background-size: cover;*/
   background-size: cover;
   display: block;
-  height: 600px;
+  height: 0px;
 }
 
 #buttons {
@@ -56,16 +57,14 @@ li {
   font-size: 10px;
   z-index: 2;
 }
-/*#buttons {*/
-  /*position: relative;*/
-  /*top: 400px;*/
-  /*margin-left: auto;*/
-  /*margin-right: auto;*/
-  /*display: block;*/
-  /*height: 100px;*/
-  /*width: 150px;*/
-  /*margin-bottom: 50px;
-}*/
+#anime {
+  height: 25px;
+  width: 90px;
+  font-size: 16px;
+  border: none;
+  background-color: #d9cb9e;
+}
+
 .btn {
   margin-top: 10px;
   /*margin-bottom: 10px;*/
@@ -77,26 +76,25 @@ li {
   height: 35px;
   opacity: 0.6;
 }
+
 form .btn {
   background: #2a2c2b;
   color: red;
+}
+span .btn {
+  background: #2a2c2b;
+  color: red;
+}
+span .btn:hover {
+  /*color: red;*/
+  font-size: 20px;
 }
 form {
   color: red;
 }
 
-.glyphicon {
-  color: red;
-}
-
 .btn a {
   color: black;
-}
-.btn:hover {
-  background: #dc3522;
-}
-.btn:active {
-  background: #dc3522;
 }
 
 #logform, #signform {
