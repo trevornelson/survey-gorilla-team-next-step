@@ -27,8 +27,3 @@ post "/authentication/signin" do
     redirect '/?error=true'
   end
 end
-
-get '/authentication/logout' do
-  session[:user_id] = nil
-  redirect '/'
-end
