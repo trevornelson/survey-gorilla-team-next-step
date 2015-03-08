@@ -13,17 +13,17 @@
   end
 end
 
-Survey.all.each do |s|
+Survey.all.each do |survey|
   40.times do
     survey_user = User.create(name: Faker::Name.name,
                               email: Faker::Internet.email,
                               password: Faker::Internet.password)
 
-    SurveyUser.create(user_id: survey_user.id, survey_id: s.id)
+    SurveyUser.create(user_id: survey_user.id, survey_id: survey.id)
 
-    s.questions.each do |q|
-      answer = Random.rand(1..3)
-      Answer.create(question_id: q.id, choice_id: answer)
+    survey.questions.each do |question|
+      choice_ids = question.choices.map { |choice| choice.id }
+      Answer.create(question_id: question.id, choice_id: choice_ids.sample)
     end
 
   end

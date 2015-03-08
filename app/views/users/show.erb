@@ -4,8 +4,10 @@
 	</div>
 
 	<div class="row">
-		<div class="col-md-9 panel" id="survey-results">
+		<div class="col-md-2 panel" id="survey-results">
 			<%= erb :'users/_survey_stats_nav', :locals => {surveys: @user.surveys} %>
+		</div>
+		<div class="col-md-7">
 			<% if @user.surveys %>
 				<%= erb :'users/_survey_statistics', :locals => {survey: @user.surveys.first} %>
 			<% else %>

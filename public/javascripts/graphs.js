@@ -25,7 +25,6 @@ var Funct = {
       success: function(result) {
         for (var question in result) {
           if (result.hasOwnProperty(question)) {
-            console.log(result[question]);
             Graph.generateGraph(result[question], question);
           }
         }
@@ -37,9 +36,11 @@ var Funct = {
 var Graph = {
   generateGraph: function(question_stats, question_id) {
     var settings = Graph.labelPie(question_stats);
+    // new Chartist.Pie('.ct_chart', settings.data, settings.options, settings.responsiveOptions);
     new Chartist.Pie('#question_' + question_id, settings.data, settings.options, settings.responsiveOptions);
   },
   labelPie: function(question_stats) {
+    console.log('in labelPie function');
     var data = {
       labels: [],
       series: []
@@ -48,7 +49,7 @@ var Graph = {
     for (var choice in question_stats) {
       if (question_stats.hasOwnProperty(choice)) {
         data.labels.push(choice);
-        data.series.push(question_stats.choice);        
+        data.series.push(question_stats[choice]);        
       }
     }
 
@@ -72,7 +73,9 @@ var Graph = {
         chartPadding: 20
       }]
     ];
-
+    console.log(data);
+    console.log(options);
+    console.log(responsiveOptions);
     return {
       data: data,
       options: options,
