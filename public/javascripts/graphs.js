@@ -1,6 +1,6 @@
 $( document ).ready(function(){
 
-  var surveyId = $( '#survey-container' ).data('survey');
+  var surveyId = $( '#survey-container-inner' ).data('survey');
 
   Funct.surveyStatsAjax(surveyId);
 
@@ -32,8 +32,19 @@ var Funct = {
     $( '.survey-selector' ).removeClass( 'active' );
     $(this).addClass('active');
   },
+  refreshStatsAjax: function(survey_id){
+    $.ajax({
+      url: '/surveys/refresh.json',
+      type: 'get',
+      data: {survey_id: survey_id},
+      success: function(result) {
+        $( '#survey-container' ).html(result);
+      }
+    });
+  },
   updateSurveyStats: function(target, data){
     Funct.surveyNavActive(target);
+    Funct.refreshStatsAjax(data['surveyId'])
     Funct.surveyStatsAjax(data['surveyId']);
   },
   surveyStatsAjax: function(survey_id){
@@ -42,7 +53,6 @@ var Funct = {
   		type: 'get',
       data: {survey_id: survey_id},
       success: function(result) {
-        console.log(result);
         for (var question in result) {
           if (result.hasOwnProperty(question)) {
             Graph.generateGraph(result[question], question);
