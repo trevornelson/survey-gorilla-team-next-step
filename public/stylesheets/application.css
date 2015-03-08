@@ -1,6 +1,17 @@
 /*Begin Survey CSS*/
 .container {
   padding-top: 1em;
+  padding-left: 6em;
+  padding-right: 6em;
+}
+
+.answer {
+	padding-left: 3em;
+}
+
+.answer-new {
+	outline: 1px dashed gray;
+	font-color: gray;
 }
 /*End Survey CSS*/
 

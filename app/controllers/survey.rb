@@ -1,5 +1,9 @@
-get '/survey' do
-  erb :'surveys/show'
+get '/surveys/:id' do
+	@survey = Survey.find(params[:id])
+	@questions = Question.all
+	@answers = Answer.all
+	@choices = Choice.all
+	erb :'surveys/show'
 end
 
 post '/survey/:id' do
