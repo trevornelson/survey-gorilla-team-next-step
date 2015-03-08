@@ -1,0 +1,6 @@
+<div class='container-fluid' data-survey=<%= survey.id %> id='survey-container'>
+	<% survey.questions.each do |question| %>
+	<div class='.ct-square' id="question_<%= question.id %>">
+	</div>
+	<% end %>
+</div>

@@ -6,7 +6,7 @@ class Question < ActiveRecord::Base
   	results = {}
 
   	choices.each do |choice|
-  		results[choice.id] = choice.answers.length
+  		results[choice.text] = choice.answers.length
   	end
 
   	return results
