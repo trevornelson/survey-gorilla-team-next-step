@@ -6,11 +6,13 @@
 	<div class="row">
 		<div class="col-md-2" id="survey-results">
 			<h2>View Stats</h2>
+			<% if @user.surveys.count > 0 %>
 			<%= erb :'users/_survey_stats_nav', :locals => {surveys: @user.surveys} %>
+			<% end %>
 		</div>
 		<div class="col-md-7" id="survey-container">
 			<h2>Survey Statistics</h2>
-			<% if @user.surveys %>
+			<% if @user.surveys.count > 0 %>
 				<%= erb :'users/_survey_statistics', :locals => {survey: @user.surveys.first} %>
 			<% else %>
 				<%= erb :'users/_no_surveys' %>
