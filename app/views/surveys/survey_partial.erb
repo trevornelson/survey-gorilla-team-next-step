@@ -1,16 +1,52 @@
 <div class="container">
- <div class="input-group input-group-lg">
-  <span class="input-group-addon" id="sizing-addon1">Title:</span>
-  <input type="text" class="form-control" placeholder="Input survey title here..." aria-describedby="sizing-addon1">
-</div>
-<br>
-<div class="input-group">
-  <span class="input-group-addon" id="sizing-addon2">Question 1:</span>
-  <input type="text" class="form-control" placeholder="Input Question 1 here..." aria-describedby="sizing-addon2">
-</div>
+	<div class="page-header"><h2>Survey Form</h2></div>
+	<form action="/partial" name="title" method="POST">
+		<div class="input-group input-group-lg">
+			<span class="input-group-addon" id="sizing-addon1">Title:</span>
+			<input type="text" class="form-control" placeholder="Input survey title here..." aria-describedby="sizing-addon1">
+		</form>
+	</div>
+	<br>
 
-<div class="input-group input-group-sm">
-  <span class="input-group-addon" id="sizing-addon3">Answer 1:</span>
-  <input type="text" class="form-control" placeholder="Input Answer 1 here..." aria-describedby="sizing-addon3">
-</div>
+	<div class="survey-form-wrapper">
+	<form action="/partial" name="question-1" method="POST">
+		<div class="input-group">
+			<span class="input-group-addon" id="sizing-addon2">Q:</span>
+			<input type="text" class="form-control" placeholder="Input Question here..." aria-describedby="sizing-addon2">
+	</div>
+		</form><br>
+
+	<form action="/partial" name="answer-1" method="POST">
+	<ul><div class="input-group input-group-sm">
+		<span class="input-group-addon" id="sizing-addon3">A:</span>
+		<input type="text" class="form-control" placeholder="Input Answer here..." aria-describedby="sizing-addon3">
+	</div></ul>
+	</form>
+
+	<form action="/partial" name="answer-2" method="POST">
+	<ul><div class="input-group input-group-sm">
+		<span class="input-group-addon" id="sizing-addon3">A:</span>
+		<input type="text" class="form-control" placeholder="Input Answer here..." aria-describedby="sizing-addon3">
+	</div></ul>
+	</form>
+
+	<form action="/partial" name="answer-3" method="POST">
+	<ul><div class="input-group input-group-sm">
+		<span class="input-group-addon" id="sizing-addon3">A:</span>
+		<input type="text" class="form-control" placeholder="Input Answer here..." aria-describedby="sizing-addon3">
+	</div></ul>
+	</form>
+
+		<form action="/partial" name="answer-4" method="POST">
+	<ul><div class="input-group input-group-sm">
+		<span class="input-group-addon" id="sizing-addon3">A:</span>
+		<input type="text" class="form-control" placeholder="Input Answer here..." aria-describedby="sizing-addon3">
+	</div></ul>
+	</form>
+	</div>
+
+	<button type="button" id="add-btn" class="btn btn-info btn-block">Add Question</button>
+
+	<input type='submit' value='Create Survey'/>
+
 </div>
