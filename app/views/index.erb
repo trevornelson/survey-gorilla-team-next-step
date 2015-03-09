@@ -1,9 +1,14 @@
-<div class="container-fluid" id="index">
-  <div id="title">
-    <h1 id="welcome">Welcome to Survey Gorilla!!!</h1>
-    </div>
+<div class="container" id="index">
+  
 
-  <div id="greeting">
+  <div class="jumbotron" id="greeting">
+    <div id="title">
+      <h1 id="welcome">Welcome to Survey Gorilla!!!</h1>
+      <div id="buttons" >
+        <button type="button" class="btn btn-default btn-lg btn-block" id="login">LOG IN</button>
+       <button type="button" class="btn btn-default btn-lg btn-block" id="signup">SIGN UP</button>
+    </div>
+    </div>
     <div id="logform">
       <form action='/authentication/signin' method='POST'>
         <input type='text' name='email' placeholder='EMAIL'/><br><br>
@@ -21,9 +26,6 @@
         <input type='submit' value='SIGN UP'/>
       </form>
     </div>
-     <div id="buttons" >
-        <button type="button" class="btn btn-default btn-lg btn-block" id="login">LOG IN</button>
-       <button type="button" class="btn btn-default btn-lg btn-block" id="signup">SIGN UP</button>
-    </div>
+     
   </div>
 </div>
