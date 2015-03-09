@@ -17,7 +17,8 @@
 
 .container-fluid {
    display: block;
-   background-color: #2a2c2b;
+   background-color: #d9cb9e;
+   height: 1050px;
 }
 ul #login {
    background-color: #D9CB9E;
@@ -28,69 +29,122 @@ li {
   display: inline;
 }
 #title {
+  position: relative;
+  top: -90px;
   display: block;
-  height: 110px;
-  margin-top: 20px;
-  font-family: Coursive;
-  /*background-color: #D9CB9E;*/
+  height: 100px;
+  font-family: GoodDog;
+  z-index: 1;
 }
 #greeting {
+  position: relative;
+  top: -60px;
+  display: table;
+  width: 100%;
+  height: 0px;
+}
+#gorilla {
+  display: table-cell;
+  width: 75%;
   background: url(http://4.bp.blogspot.com/-JRIvicT_Ohs/TmFc6lHxxDI/AAAAAAAAEbA/rRCBGE_EXLY/s1600/Funny+Gorilla+picture+for+widescreen2.jpg) no-repeat center center fixed;
   /*-webkit-background-size: cover;*/
   /*-moz-background-size: cover;*/
   /*-o-background-size: cover;*/
   background-size: cover;
-  position:; absolute;
-  display: block;
-  height: 600px;
-  display: block;
+  border-right: 2px solid #2a2c2b;
 }
+#mytext {
+  display: table-cell;
+  width: 25%;
+  background: #dc3522;
+  opacity: 0.9;
+  font-family: ‘Palatino Linotype’, sans-serif ;
+}
+#mytext h2 {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+#mytext p {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
 #buttons {
   position: relative;
-  top: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  height: 100px;
-  width: 150px;
-  margin-bottom: 50px;
+  left: 10px;
+  top: 10px;
+  width: 90px;
+  font-size: 10px;
+  z-index: 2;
 }
+#anime {
+  height: 25px;
+  width: 90px;
+  font-size: 16px;
+  border: none;
+  background-color: #d9cb9e;
+}
+
 .btn {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  /*margin-bottom: 10px;*/
   background: #d9cb9e;
   border: #374140;
   font-weight: bolder;
+  font-size: 15px;
+  font-family: 'Roboto Slab', Arial;
+  height: 35px;
+  opacity: 0.6;
 }
-.btn:hover {
-  background: #dc3522;
+
+form .btn {
+  background: #2a2c2b;
+  color: red;
 }
-.btn:active {
-  background: #dc3522;
+span .btn {
+  background: #2a2c2b;
+  color: red;
+}
+span .btn:hover {
+  /*color: red;*/
+  font-size: 20px;
+}
+form {
+  color: red;
+}
+
+.btn a {
+  color: black;
 }
 
 #logform, #signform {
   position: fixed;
-  bottom: 50px;
-  margin-top: 250px;
+  top: 50px;
+  /*margin-top: 250px;*/
   margin-left: 100px;
   padding: 50px;
   width: 30%;
-  background: #D9CB9E;
-  opacity: 0.7;
+  background: #2a2c2b;
+  opacity: 0.9;
   display: none;
   border-radius: 10px;
+  z-index: 2;
 }
 #welcome {
   display: inline-block;
-  margin-left: 200px;
+  margin-left: 150px;
   text-align: center;
   font-size: 60px;
-  color: red;
+  color: #374140;
+  font-weight: bolder;
+  font-family: copperplate;
 }
 
 .question-results {
   margin: 20px;
   height: 500px;
 }
+
 
