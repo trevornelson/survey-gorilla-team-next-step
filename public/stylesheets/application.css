@@ -64,10 +64,11 @@ li {
 #gorilla {
   display: table-cell;
   width: 75%;
-  background: url(http://4.bp.blogspot.com/-JRIvicT_Ohs/TmFc6lHxxDI/AAAAAAAAEbA/rRCBGE_EXLY/s1600/Funny+Gorilla+picture+for+widescreen2.jpg) no-repeat center center fixed;
+  background: url(http://4.bp.blogspot.com/-JRIvicT_Ohs/TmFc6lHxxDI/AAAAAAAAEbA/rRCBGE_EXLY/s1600/Funny+Gorilla+picture+for+widescreen2.jpg) no-repeat;
   /*-webkit-background-size: cover;*/
   /*-moz-background-size: cover;*/
   /*-o-background-size: cover;*/
+
   background-size: cover;
   border-right: 2px solid #2a2c2b;
 }
@@ -87,6 +88,10 @@ li {
   margin-left: 20px;
   margin-right: 20px;
   font-size: 20px;
+/*  position:; absolute;
+  display: block;*/
+  height: 500px;
+/*  display: block;*/
 }
 
 #buttons {
@@ -103,6 +108,14 @@ li {
   font-size: 16px;
   border: none;
   background-color: #d9cb9e;
+/*  position: relative;
+  top: 400px;*/
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: 100px;
+  width: 150px;
+  margin-bottom: 50px;
 }
 
 .btn {
