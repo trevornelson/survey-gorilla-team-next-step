@@ -1,3 +1,16 @@
+body {
+  background-color: #1E8BC3;
+  font-family: 'Merriweather', serif;
+}
+
+h1,h2,h3 {
+  color: #FFF;
+}
+
+h1,h2,h3,h4 {
+  font-family: 'Noto Serif', serif;
+}
+
 /*Begin Survey CSS*/
 .container {
   padding-top: 1em;
@@ -17,7 +30,7 @@
 
 .container-fluid {
    display: block;
-   background-color: #2a2c2b;
+/*   background-color: #2a2c2b;*/
 }
 ul #login {
    background-color: #D9CB9E;
@@ -31,7 +44,7 @@ li {
   display: block;
   height: 110px;
   margin-top: 20px;
-  font-family: Coursive;
+/*  font-family: Coursive;*/
   /*background-color: #D9CB9E;*/
 }
 #greeting {
@@ -86,12 +99,12 @@ li {
   margin-left: 200px;
   text-align: center;
   font-size: 60px;
-  color: red;
+  color: #FFF;
 }
 
 .question-results {
   margin: 20px;
-  height: 500px;
+  height: auto;
 }
 
 .navbar {
